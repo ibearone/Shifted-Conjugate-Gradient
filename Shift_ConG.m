@@ -37,10 +37,11 @@ while k<loops
     pi(k+1)=(1+a(k)*sigma)*pi(k)-a(k)*b(k-1)/a(k-1)*(pi(k-1)-pi(k))
     p{k}=1/pi(k).*r{k}+b(k-1)*(pi(k-1)/pi(k))^2.*p{k-1}
     x{k}=x{k-1}+pi(k)/pi(k+1)*a(k).*p{k}
+    
     norm_r(k)=norm(r{k})
     norm_p(k)=norm(p{k})
         %%%% Checking convergence
-    if norm_r(k)>tolerance
+    if norm_r(k)>tolerance & norm_p(k)>tolerance
         loops=loops+1
     else
         loops=loops
