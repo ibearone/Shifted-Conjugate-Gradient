@@ -41,10 +41,10 @@ while k<loops
     norm_r(k)=norm(r{k})
     norm_p(k)=norm(p{k})
         %%%% Checking convergence
-    if norm_r(k)>tolerance & norm_p(k)>tolerance
-        loops=loops+1
-    else
+    if norm_r(k)<tolerance && norm_p(k)<tolerance
         loops=loops
+    else
+        loops=loops+1
     end
     k=k+1
 end
