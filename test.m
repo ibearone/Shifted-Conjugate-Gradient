@@ -45,7 +45,6 @@ plot(def(:,n),'LineWidth',1)
 hold on;
 end
 legend('\sigma=2','\sigma=1','\sigma=0.5','\sigma=0.1','\sigma=0','location','best')
-legend('|r|','|x-X|')
 xlabel Steps
 ylabel |x-X|
 
